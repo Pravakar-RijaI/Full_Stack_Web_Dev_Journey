@@ -1,0 +1,139 @@
+body{
+    font-family: sans-serif;
+}
+button{
+    cursor: pointer;
+    margin: 9px;
+}
+
+#sub {
+    background-color: rgb(204, 2, 2);
+    color: white;
+    border: none;
+    border-color: red;
+    height: 38px;
+    width: 110px;
+    border-radius: 2px;
+}
+#req {
+    background-color: black;
+    color: white;
+    border: none;
+    height: 38px;
+    width: 110px;
+}
+#join{
+    background-color: white;
+    border-color: rgb(41, 118, 211);
+    border-width: 1px;
+    border-style: solid;
+    color: rgb(41, 118, 211);
+    height: 38px;
+    width: 65px;
+    border-radius: 2px;
+}
+#tweet{
+    color: white;
+    background-color: #00acee;
+    font-weight: bold;
+    border: none;
+    width: 74px;
+    height: 38px;
+    border-radius: 19px;
+    font-size: 14px;
+}
+#ama{
+    color: black;
+    background-color: rgb(255, 204, 39);
+    border: none;
+    width: 199px;
+    height: 32px;
+    border-radius: 16px;
+    font-size: 14px;
+}
+#git{
+    height: 38px;
+    width: 94px;
+    color: white;
+    background-color: rgb(46, 164, 79);
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+#bootget{
+    height: 36px;
+    width: 109px;
+    color: white;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(121,82,179);
+    border-radius: 3px;
+}
+#bootdow{
+    height: 36px;
+    width: 109px;
+    color: grey;
+    border-width: 1px;
+    border-color: rgb(173, 173, 173);
+    border-style: solid;
+    font-weight: bold;
+    border-radius: 3px;
+}
+#linkapp{
+    height: 36px;
+    width: 213px;
+    color: white;
+    border: none;
+    background-color: rgb(10,102,194);
+    font-weight: bold;
+    border-radius: 18px;
+}
+#linksa{
+    height: 36px;
+    width: 76px;
+    color: rgb(10,102,194);
+    background-color: white;
+    border-color: rgb(10,102,194);
+    border-radius: 18px;
+    font-weight: bold;
+    border-style: solid;
+    border-width: 1px;
+}
+#link{
+    color: rgb(0,113,133);
+}
+#link:active{
+    color: rgb(0,113,133);
+
+}
+#head{
+    font-size: xx-large;
+    font-weight: bold;
+}
+#price{
+    font-weight: bold;
+    font-size: medium;
+   
+    color: rgb(0,118,0);
+}
+#cart{
+    color: black;
+    background-color: rgb(255, 204, 39);
+    border: none;
+    width: 110px;
+    height: 32px;
+    border-radius: 16px;
+    font-size: 14px;
+    margin: none;
+}
+#buy{
+    color: black;
+    background-color: rgb(255, 164, 28);
+    border: none;
+    width: 110px;
+    height: 32px;
+    border-radius: 16px;
+    font-size: 14px;
+    margin-left: 10px ;
+}
+
