@@ -1,3 +1,6 @@
 body{
-    background-image: linear-gradient(to right,steelblue,purple,#fff);
+    background-image: url(../img/bubbles.png), 
+    linear-gradient(to left,steelblue,purple,#fff);
+    background-repeat: repeat-y, no-repeat;
+
 }
