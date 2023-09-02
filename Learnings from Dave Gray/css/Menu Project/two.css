@@ -1,0 +1,27 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+.para{
+    columns:100px 4;
+    margin-top: 0;
+    column-rule: 2px solid black;
+}
+.para h2{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    break-inside: avoid;
+    break-before: column;
+}
+.para .qut{
+    text-align: center;
+    font-size: 2rem;
+    column-span: all;
+    margin: 2px;
+
+}
+.rty{
+    white-space: nowrap;
+}

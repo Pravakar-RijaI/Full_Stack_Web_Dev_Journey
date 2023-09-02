@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        body{
+            min-height: 200vh;
+
+        }
+        .outer-container{
+            border: 2px dashed blue;
+            height: 80vh;
+            width: 85vw;
+            margin: 3rem auto;
+        }
+        .inner-container{
+            border: 2px solid black;
+            height: 40vh;
+            width: 40vw;
+            margin: 3rem auto;
+        }
+        .box-absolute
+        {
+            background-color: black;
+            color: white;
+            height: 10vh;
+            width: 10vw;
+            padding: 1rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .box-relative{
+            background-color: red;
+            color:white;
+            position: relative;
+            height: 10vh;
+            width: 10vw;
+        }
+        .box-fixed{
+            background-color: green;
+            color: white;
+            height: 50px;
+            width: 50px;
+            position: fixed;
+        }
+        .box-sticky{
+            background-color: aqua;
+            height: 50px;
+            width: 50px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="outer-container">
+        <div class="inner-container">
+            <div class="box-absolute">
+                <p>Box Absolute</p>
+            </div>
+            <div class="box-relative">
+                <p>Box Relative</p>
+            </div>
+            <div class="box-fixed">
+                <p><a href="header.html">Box Fixed</a></p>
+            </div>
+            <div class="box-sticky">
+                <p>Box Sticky</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
