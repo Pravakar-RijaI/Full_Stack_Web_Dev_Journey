@@ -3,7 +3,56 @@
     padding: 0;
     box-sizing: border-box;
 }
-header h1{
+body{
+    background-color: #475569;
+    background-image: radial-gradient(whitesmoke,#475569);
+    display: flex;
+    flex-direction: column;
+}
+
+header,main,nav,footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    text-align: center;
+}
+
+header,footer{
+    color: whitesmoke;
+    background-color:#1E293B;
+    position: sticky;
+}
+header{
+    top: 0;
+}
+footer{
+    bottom: 0;
+}
+nav{
+    background-color: whitesmoke;
+    color: black;
+}
+main{
+    flex-grow: 1;
+}
+nav ul{
+    list-style-type: none;
+}
+ul li{
+    display:inline;
+}
+.joe{
+    border: 1px solid black;
+}
+figure img{
+    width: 35%;
+    height: auto;
+    border-radius: 50%;
+    border: 2px double grey;
+}
+
+
+/* header h1{
     background-color: rgb(2, 26, 53);
     text-align: center;
     color: white;
@@ -69,4 +118,4 @@ footer
     text-align: center;
     position: sticky;
     bottom: 0;
-}
+} */
