@@ -1,6 +1,20 @@
 body{
-    background-image: url(../img/bubbles.png), 
+    /* background-image: url(../img/bubbles.png), 
     linear-gradient(to right,steelblue,purple,#fff);
     background-repeat: repeat-y, repeat;
-
+    background-position: left;*/
+     
+    background: repeat-y left  url(../img/bubbles.png), 
+    linear-gradient(to right,steelblue,purple,#fff);
+    background-size: 20%,auto;
+}
+.clip{
+    font-size: 18rem;
+    text-transform: uppercase;
+    background-image: url(../img/scenic-2200x1331.png);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
 }
