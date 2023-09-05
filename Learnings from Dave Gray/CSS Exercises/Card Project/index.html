@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Mini Project Profile Cards</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>CSS Mini Project: Profile Cards</title>
 </head>
+
 <body>
     <header>
-            <h1>Our Staff</h1>
+        <h1>Our Staffs</h1>
         <nav>
-            <ul>
-                <li><a href="#joe">Joe</a></li>
-                <li><a href="#Matt">Matt</a></li>
-                <li><a href="#Jill">Jill</a></li>
-            </ul>
+            <a href="#profile1">Joe</a>
+            <a href="#profile2">Matt</a>
+            <a href="#profile3">Jane</a>
         </nav>
     </header>
     <main>
-        <section id="joe">
+        <article id="profile1" class="card">
             <figure>
-                <img src="img/profile1-500x500.png" alt="Joe" title="Joe PP" width="500" height="500">
-                <figcaption>Joe Coder <p><q>I code stuff.</q></p></figcaption>
+                <img src="./img/profile1-500x500.png" alt="Joe Coder" width="500" height="500">
+                <figcaption>Joe Coder</figcaption>
             </figure>
-        </section>
-        <section id="Matt">
+            <p><q>I code stuff.</q></p>
+        </article>
+        <article id="profile2" class="card">
             <figure>
-                <img src="img/profile2-500x500.png" alt="Matt" title="Matt PP" width="500" height="500">
-                <figcaption>Matt Designer<p>"I design stuff."</p></figcaption>
+                <img src="./img/profile2-500x500.png" alt="Matt Designer" width="500" height="500">
+                <figcaption>Matt Designer</figcaption>
             </figure>
-        </section>
-        <section id="Jill">
+            <p><q>I design stuff.</q></p>
+        </article>
+        <article id="profile3" class="card">
             <figure>
-                <img src="img/profile3-500x500.png" alt="Jill" title="Jill PP" width="500" height="500">
-                <figcaption>Jane Dev Rel<p>"I teach stuff."</p></figcaption>
+                <img src="./img/profile3-500x500.png" alt="Jane Dev Rel" width="500" height="500">
+                <figcaption>Jane Dev Rel</figcaption>
             </figure>
-        </section>
+            <p><q>I teach stuff.</q></p>
+        </article>
     </main>
     <footer>
-        <p>&copy;Acme Co.</p>
+        <p>&copy; Acme Co.</p>
     </footer>
 </body>
+
 </html>
