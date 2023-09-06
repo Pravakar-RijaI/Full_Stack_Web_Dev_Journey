@@ -17,6 +17,9 @@ img{
 }
 
  /* GENERAL STYLES */
+ html{
+    scroll-behavior: smooth;
+ }
 body{
     font: 1.5rem sans-serif;
     min-height: 100vh;
@@ -34,9 +37,6 @@ header,footer{
 header{
     top:0;
 }
-footer{
-    bottom:0;
-}
 nav{
     background-color: white;
     padding: 0.5rem;
@@ -51,10 +51,39 @@ nav a,nav a:visited{
 nav a:hover,nav a:focus{
     color: hsla(0,0%,20%,0.6);
 }
+footer{
+    bottom:0;
+}
 main{
     flex-grow: 1;
     display:flex;
-    
-    justify-content:center;
+    flex-direction: column;
     align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+.card{
+    scroll-margin-top: 8rem;
+    width: min(100%,350px);
+    border-radius: 15px;
+    background-color: #cbd5e1;
+    border: 2px solid black;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+.card figure{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.card img{
+    border:5px double #333;
+    border-radius: 50%;
+}
+.card figcaption{
+    font-weight: bolder;
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem;
 }
