@@ -7,14 +7,18 @@
     <style>
         body{
             font-family: sans-serif;
+            display: flex;
+            justify-content: center;
         }
         .container{
             padding: 1rem;
-            width: 50%;
+            width: 255px;
             border: 2px dashed firebrick;
             display: flex;
             flex-direction: row;
-            gap: 1rem;
+        }
+        .nowrap{
+            white-space: nowrap;
         }
         .skill{
             font-weight: bold;
@@ -29,7 +33,7 @@
 <body>
     <div class="container">
         <div class="skill">
-        <p>C-Programming</p>
+        <p class="nowrap">C-Programming</p>
         <p>HTML</p>
         <p>Python</p>
         <p>Prolog</p>
