@@ -25,26 +25,64 @@
         padding: 1rem;
         min-height: 100vh;
     }
+    .header__h1{
+        margin: 1rem 0;
+        padding: 0.5rem;
+        text-transform: uppercase;
+        text-align: center;
+        background-color: firebrick;
+        color: var(--LIGHTCOLOR);
+        box-shadow: 10px 10px 10px var(--DARKCOLOR);
+    }
 
     .h2{
-        margin: 0.5rem 0;
+        margin: 2rem 0;
         padding: 1rem;
         color: var(--LIGHTCOLOR);
         background-color: var(--DARKCOLOR);
+        box-shadow: 10px 4px 10px black;
     }
-
+    
     iframe {
         height: 300px;
         width: 33%;
     }
+
+    .footer__h2{
+        padding: 0.2rem;
+        text-align: center;
+        background-image: linear-gradient(to top,white,black,white);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .footer__a{
+        color: var(--DARKCOLOR);
+        text-decoration: none;
+        
+    }
+    .footer__a:hover{
+        animation: link 10s ease 1s 5;
+    }
+
+    @keyframes link{
+        0%{
+            transform: rotate(0deg);
+        }
+        50%{
+            transform: rotate(90deg);
+        }
+    }
 </style>
 
 <body>
-    <header>
+    <header class="header">
+        <h1 class="header__h1">Overview of the Repository</h1>
 
 
     </header>
-    <main>
+    <main class="iframes">
         <section class="AngelaYu">
             <h2 class="h2 AngelaYu__h2">Learnings from Angela Yu</h2>
             <iframe src="./Learnings from Angela Yu/HTML and CSS/Exercises/Birthday/index.html"
@@ -80,8 +118,9 @@
             <iframe src="./Self Curiosity/Skills Tab/index.html" frameborder="1"></iframe>
         </section>
     </main>
-    <footer>
-
+    <footer class="footer">
+        <h2 class="h2 footer__h2"><a href="#" class="footer__a">^</a> Pravakar Rijal <a href="#" class="footer__a">^</a>
+        </h2>
     </footer>
 </body>
 
