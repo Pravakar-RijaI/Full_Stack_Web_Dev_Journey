@@ -1,0 +1,51 @@
+/* RESET STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLE DECLARATIONS */
+:root {
+    /* COLOR */
+    --DARKCOLOR: black;
+    --LIGHTCOLOR: white;
+    --BACKCOLOR: #475569;
+    --HEADFOOTCOL: #1E293B;
+}
+
+/* GENRAL STYLES */
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 30px calc(100% - 60px) 30px;
+}
+
+.header {
+    background-color: var(--HEADFOOTCOL);
+    color: var(--LIGHTCOLOR);
+    box-shadow: 10px 10px 10px black;
+    grid-column: 1/4;
+    grid-row: 1/2;
+    display: grid;
+    place-content: center;
+}
+
+.main {
+    background-color: var(--BACKCOLOR);
+    background-image: radial-gradient(var(--LIGHTCOLOR),var(--BACKCOLOR));
+    grid-column: 1/4;
+    grid-row: 2/3;
+    display: grid;
+    place-content: center;
+}
+
+.footer {
+    background-color: var(--HEADFOOTCOL);
+    color: var(--LIGHTCOLOR);
+    grid-column: 1/4;
+    grid-row: 3/4;
+    display: grid;
+    place-content: center;
+}
