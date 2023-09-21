@@ -33,12 +33,29 @@ body {
 }
 
 .main {
+    padding: 1rem;
     background-color: var(--BACKCOLOR);
-    background-image: radial-gradient(var(--LIGHTCOLOR),var(--BACKCOLOR));
+    background-image: radial-gradient(var(--LIGHTCOLOR), var(--BACKCOLOR));
     grid-column: 1/4;
     grid-row: 2/3;
+    display: flex;
+    justify-content: space-between;
+    /* align-items:center; */
+    flex-flow: row wrap;
+}
+.square{
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--DARKCOLOR);
+    border-radius: 10px;
     display: grid;
     place-content: center;
+    background-color: orange;
+    font-size: 2rem;
+    box-shadow: 2px 2px 2px black;
+}
+.square--primary{
+    background-color: cornflowerblue;
 }
 
 .footer {
@@ -48,4 +65,13 @@ body {
     grid-row: 3/4;
     display: grid;
     place-content: center;
+}
+
+@media (prefers-color-scheme: dark){
+    .square{
+        background-color: cornflowerblue;
+    }
+    .square--primary{
+        background-color: orange;
+    }
 }
