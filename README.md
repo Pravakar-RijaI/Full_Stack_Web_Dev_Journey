@@ -1,6 +1,7 @@
 # Full_Stack_Web_Dev_Journey
-A repository with various html projects from different sources like YOUTUBE, COURSERA, FREECODECAMP, UDEMY etc.
-<br>
+A repository with various html projects from different sources like Mozilla Developer Network(MDN), YOUTUBE, COURSERA, FREECODECAMP, UDEMY etc.
+
+
 Mentors,Creaters learning from:
 <ul>
 <li>Dave Gray</li>
