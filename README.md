@@ -4,7 +4,7 @@ A repository with various html projects from different sources like Mozilla Deve
 
 Mentors,Creaters learning from:
 <ul>
-<li>Dave Gray</li>
+<li>![Profie Picture of Dave Gray](https://yt3.googleusercontent.com/ytc/AOPolaTROVx_m_IVqgZIk6WY5paNQNLMdPikPlFBkumo2w=s900-c-k-c0x00ffffff-no-rj) Dave Gray</li>
 <li>Angela Yu</li>
 <li>Mosh Hamedani</li>
 <li>SuperSimpleDev</li>
