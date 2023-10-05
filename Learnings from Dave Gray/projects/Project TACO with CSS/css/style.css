@@ -11,9 +11,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-img{
-    width: ;
-}
+
 .main{
     padding: 1rem;
     width: calc(50%+20vw);
