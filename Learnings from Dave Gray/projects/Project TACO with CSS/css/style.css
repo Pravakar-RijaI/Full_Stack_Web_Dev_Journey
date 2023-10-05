@@ -1,0 +1,28 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+body{
+    font-size: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width: ;
+}
+.main{
+    padding: 1rem;
+    width: calc(50%+20vw);
+    border-inline: 1px solid black;
+}
+td,th,caption{
+    padding: 0.5rem;
+    border: 1px solid black;
+}
+caption,tfoot{
+    font-family:'Courier New', Courier, monospace;
+}
