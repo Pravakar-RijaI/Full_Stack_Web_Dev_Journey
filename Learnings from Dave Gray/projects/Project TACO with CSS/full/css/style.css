@@ -24,8 +24,15 @@ img {
     --FCLR: #000;
     --BGCLR: orange;
     --BGCLR-FADE: rgb(252, 220, 160);
-    --BGIMG: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
+    --BGIMG: linear-gradient(to bottom, var(--BGCLR), var(--BGCLR-FADE));
     --BODY-BGCLR: #FFF;
+    --SUBHCLR: green;
+    --HEADING-BG-CLR: #000;
+    --HEADING-CLR: #FFF;
+
+    /* SIZE */
+    --PADDING-TB: 0.25rem;
+    --PADDING-INLINE: 0.5rem;
 }
 
 /* UTILITY CLASSES */
@@ -38,8 +45,58 @@ img {
     white-space: nowrap;
 }
 
-.center{
+.center {
     text-align: center;
 }
 
 /* GENERAL STYLES */
+html {
+    scroll-behavior: smooth;
+    background-color: var(--BGCLR);
+    background-image: var(--BGIMG);
+}
+
+body {
+    max-width: 800px;
+    min-height: 100vh;
+    background-color: var(--BODY-BGCLR);
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--FF-HEADINGS);
+    letter-spacing: 0.1em;
+}
+
+h2,
+h3 {
+    color: var(--SUBHCLR);
+}
+a:any-link{
+    color: var(--FCLR);
+    text-decoration: none;
+}
+
+/* HEADER */
+.header__h1{
+    background-color: var(--HEADING-BG-CLR);
+    color: var(--HEADING-CLR);
+    padding: var(--PADDING-TB) var(--PADDING-INLINE);
+}
+
+.header__nav{
+    border-bottom: 1px solid var(--FCLR);
+    box-shadow: 0 0 3px var(--FCLR);
+}
+
+.header__ul{
+    font-weight: bold;
+    font-size: var(--FS);
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    list-style-type: none;
+    padding: var(--PADDING-TB);
+}
