@@ -51,16 +51,29 @@ alert(javaScript);
 // const averageKoalas= (109+95+123)/3;
 
 // TEST DATA3
-const averageDolphins = (97+112+101)/3;
-const averageKoalas = (109+95+106)/3;
+// const averageDolphins = (97+112+101)/3;
+// const averageKoalas = (109+95+106)/3;
 
-if(averageDolphins > averageKoalas && averageDolphins >= 100)
-console.log(` Dolphins🐬 (${averageDolphins}) win over Koalas🐨 (${averageKoalas}).`);
-else if(averageDolphins === averageKoalas && averageDolphins >= 100)
-console.log(` Dolphins🐬 (${averageDolphins}) draw with Koalas🐨 (${averageKoalas}).`);
-else if(averageKoalas > averageDolphins && averageKoalas >= 100)
-console.log(` Koalas🐨 (${averageDolphins}) win over Dolphins🐬 (${averageKoalas}).`);
-else
+// if(averageDolphins > averageKoalas && averageDolphins >= 100)
+// console.log(` Dolphins🐬 (${averageDolphins}) win over Koalas🐨 (${averageKoalas}).`);
+// else if(averageDolphins === averageKoalas && averageDolphins >= 100)
+// console.log(` Dolphins🐬 (${averageDolphins}) draw with Koalas🐨 (${averageKoalas}).`);
+// else if(averageKoalas > averageDolphins && averageKoalas >= 100)
+// console.log(` Koalas🐨 (${averageDolphins}) win over Dolphins🐬 (${averageKoalas}).`);
+// else
+// {
+//     console.log("No team wins the trophy🏆.");
+// }
+
+// CHALLENGE4
+// Tip Calculator 
+let bill=[275,40,430];
+let tip=[];
+for(let i=0;i<bill.length;i++)
 {
-    console.log("No team wins the trophy🏆.");
+    tip[i]=(bill[i]>50 && bill[i]<300)?(bill[i]*(15/100)):(bill[i]*(20/100));
+}
+for(let i=0;i<bill.length;i++)
+{
+console.log(`Bill Amount is $${bill[i]} and tip is $${tip[i]} So total Amount is $${(bill[i]+tip[i])}.`);
 }
