@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --FF: arial;
+    --FS: 3.15rem;
+    --HEADCLR: #fff;
+    --BG: linear-gradient(to left,#28b487,#7dd56f);
+}
+
+.content{
+    height: 100vh;
+    background-image: var(--BG);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading{
+    font-family: var(--FF);
+    color: var(--HEADCLR);
+    font-size: var(--FS);
+}
