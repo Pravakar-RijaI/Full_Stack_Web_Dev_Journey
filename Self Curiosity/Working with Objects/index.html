@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working With Objects</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <ul>
+                <li class="home"><a href="./index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <article class="content">
+            <h1 class="content__heading">Showcasing the power of Objects</h1>
+            <p class="content__detail">Check the boxes below to see the details regarded..</p>
+        </article>
+        <article class="form-section">
+            <form class="form" onsubmit="objectFunction();">
+                <fieldset>
+                    <legend>Check the details</legend>
+                    <p><label for="first-name">First Name: </label>
+                        <input type="checkbox" name="first-name" id="first-name">
+                        <span class="fnobject object"></span>
+                    </p>
+                    <p><label for="last-name">Last Name: </label>
+                        <input type="checkbox" name="last-name" id="last-name">
+                        <span class="lnobject object"></span>
+                    </p>
+                    <p><label for="job">Job: </label>
+                        <input type="checkbox" name="job" id="job">
+                        <span class="jbobject object"></span>
+                    </p>
+                    <p><label for="birth-year">Birth Year: </label>
+                        <input type="checkbox" name="birth-year" id="birth-year">
+                        <span class="byobject object"></span>
+                    </p>
+                    <p><label for="intro">Intro: </label>
+                        <input type="checkbox" name="intro" id="intro">
+                        <span class="inobject object"></span>
+                    </p>
+                    <p><button>Submit</button>
+                    <button>Reset</button></p>
+                </fieldset>
+            </form>
+        </article>
+    </main>
+    <footer class="footer">
+        <p class="footer__copyright">&copy;Pravakar Rijal</p>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>
