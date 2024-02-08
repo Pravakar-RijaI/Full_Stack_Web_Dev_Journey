@@ -32,7 +32,7 @@ li{
 
 .main{
     background-image: var(--BG);
-    height: 85vh;
+    height: 150vh;
 }
 
 .content__heading{
@@ -47,13 +47,32 @@ li{
 }
 .form-section{
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
+    align-items: center;
     align-content: center;
 }
-.form{
+.form-section__put,.form-section__get{
     width: 50vw;
     font-size: var(--SFS);
     padding: 0.5rem;
+}
+.pa1,.pa2{
+    display: inline;
+}
+.pa1{
+    margin-right: 0.25rem;
+}
+.pa3{
+    margin-right: 4.65rem;
+}
+.pa4{
+    margin-right: 3.4rem;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 input, fieldset{
@@ -66,7 +85,7 @@ fieldset{
 p{
     padding: 0.25rem;
 }
-input{
+.form-section__get input{
     width: 20px;
     height: 20px;
 }

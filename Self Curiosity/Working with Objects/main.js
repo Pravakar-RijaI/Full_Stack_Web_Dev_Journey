@@ -1,38 +1,47 @@
-const person = {
-    firstName: 'Hemsagar',
-    lastName: 'Adhikari',
-    job: 'Programmer',
-    birthYear: 1992,
-    hasDriversLicense: true,
+function putObjectFunction(){
+    const fName= document.querySelector('#first-name');
+    const lName= document.querySelector('#last-name');
+    const joob= document.querySelector('#job');
+    const bYear= document.querySelector('#birth-year');
+    
+const objectRead = {
+    firstName: fName,
+    lastName: lName,
+    job: joob,
+    birthYear: bYear,
     calcAge: function () {
         this.age = 2024- this.birthYear;
         return this.age;
     },
     intro: function () {
     if(this.hasDriversLicense)
-    return `${this.firstName} ${this.lastName} is ${this.calcAge()} year old ${this.job} and has a driving license.`;
+    return `${this.firstName} ${this.lastName} is ${this.calcAge()} year old ${this.job}.`;
     else
-    return `${this.firstName} ${this.lastName} is ${this.calcAge()} year old ${this.job} and does not have a driving license.`;
+    return `${this.firstName} ${this.lastName} is ${this.calcAge()} year old ${this.job}.`;
     }
 };
+}
 
 
 
-function objectFunction(){
+
+function getObjectFunction(){
+    putObjectFunction();
     if(document.querySelector('#first-name').checked){
-        document.querySelector('.fnobject').innerText = person.firstName;
+        document.querySelector('.fnobject').innerText = objectRead.firstName;
+        console.log(objectRead.firstName);
     }
     if(document.querySelector('#last-name').checked){
-        document.querySelector('.lnobject').innerText = person.lastName;
+        document.querySelector('.lnobject').innerText = objectRead.lastName;
     }
     if(document.querySelector('#job').checked){
-        document.querySelector('.jbobject').innerText = person.job;
+        document.querySelector('.jbobject').innerText = objectRead.job;
     }
     if(document.querySelector('#birth-year').checked){
-        document.querySelector('.byobject').innerText = person.birthYear;
+        document.querySelector('.byobject').innerText = objectRead.birthYear;
     }
     if(document.querySelector('#intro').checked){
-        document.querySelector('.inobject').innerText = person.intro();
+        document.querySelector('.inobject').innerText = objectRead.intro();
     }
 return false;
 }

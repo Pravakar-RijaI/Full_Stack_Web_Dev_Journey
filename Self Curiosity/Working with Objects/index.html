@@ -20,55 +20,54 @@
             <p class="content__detail">Check the boxes below to see the details regarded..</p>
         </article>
         <article class="form-section">
-            <form class="form-section__put" onsubmit="putObjectFunction(); return false;">
+            <form class="form-section__put" onsubmit="putObjectFunction();">
                 <fieldset>
-                    <legend>Check the details</legend>
-                    <p><label for="first-name">First Name: </label>
-                        <input type="checkbox" name="first-name" id="first-name">
-                        <span class="fnobject object"></span>
+                    <legend>Enter the details</legend>
+                    <p><div class="part1"><label for="first-name">First Name: </label></div>
+                        <div class="part2"><input type="text" name="first-name" id="first-name"></div>
                     </p>
-                    <p><label for="last-name">Last Name: </label>
-                        <input type="checkbox" name="last-name" id="last-name">
-                        <span class="lnobject object"></span>
-                    </p>
-                    <p><label for="job">Job: </label>
-                        <input type="checkbox" name="job" id="job">
-                        <span class="jbobject object"></span>
-                    </p>
-                    <p><label for="birth-year">Birth Year: </label>
-                        <input type="checkbox" name="birth-year" id="birth-year">
-                        <span class="byobject object"></span>
-                    </p>
-                    <p><label for="intro">Intro: </label>
-                        <input type="checkbox" name="intro" id="intro">
-                        <span class="inobject object"></span>
+                    <p><div class="part1"><label for="last-name">Last Name: </label></div>                  
+                    <div class="part2"><input type="text" name="last-name" id="last-name"></div>                   </p>
+                    <p><div class="part1"><label for="job">Job: </label></div>           <div class="part2"><input type="text" name="job" id="job"></div>       </p>
+                    <p><div class="part1"><label for="birth-year">Birth Year: </label></div>
+                        <div class="part2"><input type="text" name="birth-year" id="birth-year"></div>
                     </p>
                     <p><button>Submit</button>
                     <button>Reset</button></p>
                 </fieldset>
             </form>
-            <form class="form-section__get" onsubmit="getObjectFunction(); return false;">
+            <form class="form-section__get" onsubmit="getObjectFunction();">
                 <fieldset>
                     <legend>Check the details</legend>
-                    <p><label for="first-name">First Name: </label>
-                        <input type="checkbox" name="first-name" id="first-name">
-                        <span class="fnobject object"></span>
+                    <p class="container"><div class="pa1"><label for="first-name">First Name: </label></div>
+                    <div class="pa2">
+                            <input type="checkbox" name="first-name" id="first-name">
+                            <span class="fnobject object"></span>
+                        </div>
+                        </p>
+                    <p class="container"><div class="pa1"><label for="last-name">Last Name: </div></label>
+                        <div class="pa2">
+                            <input type="checkbox" name="last-name" id="last-name">
+                            <span class="lnobject object"></span>
+                        </div>
                     </p>
-                    <p><label for="last-name">Last Name: </label>
-                        <input type="checkbox" name="last-name" id="last-name">
-                        <span class="lnobject object"></span>
+                    <p class="container"><div class="pa1 pa3"><label for="job">Job: </label></div>          
+                        <div class="pa2">
+                            <input type="checkbox" name="job" id="job">
+                            <span class="jbobject object"></span>
+                        </div>
                     </p>
-                    <p><label for="job">Job: </label>
-                        <input type="checkbox" name="job" id="job">
-                        <span class="jbobject object"></span>
+                    <p class="container"><div class="pa1"><label for="birth-year">Birth Year:</div></label>
+                        <div class="pa2">
+                            <input type="checkbox" name="birth-year" id="birth-year">
+                            <span class="byobject object"></span>
+                        </div>
                     </p>
-                    <p><label for="birth-year">Birth Year: </label>
-                        <input type="checkbox" name="birth-year" id="birth-year">
-                        <span class="byobject object"></span>
-                    </p>
-                    <p><label for="intro">Intro: </label>
-                        <input type="checkbox" name="intro" id="intro">
-                        <span class="inobject object"></span>
+                    <p class="container"><div class="pa1 pa4"><label for="intro">Intro: </label></div>
+                        <div class="pa2">
+                            <input type="checkbox" name="intro" id="intro">
+                            <span class="inobject object"></span>
+                        </div>
                     </p>
                     <p><button>Submit</button>
                     <button>Reset</button></p>
