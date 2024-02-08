@@ -20,7 +20,34 @@
             <p class="content__detail">Check the boxes below to see the details regarded..</p>
         </article>
         <article class="form-section">
-            <form class="form" onsubmit="objectFunction();">
+            <form class="form-section__put" onsubmit="putObjectFunction(); return false;">
+                <fieldset>
+                    <legend>Check the details</legend>
+                    <p><label for="first-name">First Name: </label>
+                        <input type="checkbox" name="first-name" id="first-name">
+                        <span class="fnobject object"></span>
+                    </p>
+                    <p><label for="last-name">Last Name: </label>
+                        <input type="checkbox" name="last-name" id="last-name">
+                        <span class="lnobject object"></span>
+                    </p>
+                    <p><label for="job">Job: </label>
+                        <input type="checkbox" name="job" id="job">
+                        <span class="jbobject object"></span>
+                    </p>
+                    <p><label for="birth-year">Birth Year: </label>
+                        <input type="checkbox" name="birth-year" id="birth-year">
+                        <span class="byobject object"></span>
+                    </p>
+                    <p><label for="intro">Intro: </label>
+                        <input type="checkbox" name="intro" id="intro">
+                        <span class="inobject object"></span>
+                    </p>
+                    <p><button>Submit</button>
+                    <button>Reset</button></p>
+                </fieldset>
+            </form>
+            <form class="form-section__get" onsubmit="getObjectFunction(); return false;">
                 <fieldset>
                     <legend>Check the details</legend>
                     <p><label for="first-name">First Name: </label>
