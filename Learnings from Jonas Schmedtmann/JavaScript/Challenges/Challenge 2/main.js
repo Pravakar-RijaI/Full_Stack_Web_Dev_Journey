@@ -8,7 +8,7 @@
 
 // const isAdult = function(birthYear){
 //     return (((2024-birthYear)>=18) ? true: false);
-// }   
+// }
 // console.log(isAdult(2009));
 
 // const ageCalculator = age => `Your age is ${2024-age}`;
@@ -133,12 +133,12 @@
 //     birthYear: '2002',
 //     job: 'Teacher',
 //     hasDriversLicense: false,
-    
+
 //     calcAge: function(){
 //         this.age = 2024-this.birthYear;
 //         return this.age;
 //     },
-    
+
 //     intro: function(){
 //         if(this.hasDriversLicense)
 //         console.log(this.firstName +" "+ this.lastName + " is a "+ this.calcAge() + " year old "+ this.job +", and has a driver's license.")
@@ -185,7 +185,7 @@
 //     },
 //     intro: function () {
 //         if(this.hasDriverLicense)
-//         {    
+//         {
 //             return(`${this.firstName} ${this.lastName} is a ${this.calcAge()} year old ${this.job} and has a Drivers License.`);
 //         }
 //         else
@@ -302,11 +302,11 @@
 //     dice = Math.trunc(Math.random()*6)+1;
 // }
 
-'use strict';
-// tip calculator
-const bills = [22,295,176,440,37,105,10,1100,86,52];
-const tips = [];
-const totals = [];
+// "use strict";
+// // tip calculator
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const tips = [];
+// const totals = [];
 
 // let tips = [];
 // const calcTip = function (bills){
@@ -326,37 +326,92 @@ const totals = [];
 // }
 // tips = calcTip(bills);
 
-const calcTip = function (bills) {
-    for(let i = 0; i < bills.length; i++)
-    {
-        if(bills[i] > 50 && bills[i] < 300)
-        {
-            tips.push(bills[i]*0.15);
-            totals.push(bills[i]+tips[i]);
-        }
-        else
-        {
-            tips.push(bills[i]*0.20);
-            totals.push(bills[i]+tips[i]);
-        }
+// const calcTip = function (bills) {
+//   for (let i = 0; i < bills.length; i++) {
+//     if (bills[i] > 50 && bills[i] < 300) {
+//       tips.push(bills[i] * 0.15);
+//       totals.push(bills[i] + tips[i]);
+//     } else {
+//       tips.push(bills[i] * 0.2);
+//       totals.push(bills[i] + tips[i]);
+//     }
+//   }
+// };
 
-    }
-}
+// calcTip(bills);
+// console.log(tips);
+// console.log(totals);
 
-calcTip(bills);
-console.log(tips);
-console.log(totals);
+// const arr = [1, 2, 3, 4, 5];
 
-const arr = [1,2,3,4,5];
+// const calcAverage = function (arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum = sum + arr[i];
+//   }
+//   return sum / arr.length;
+// };
 
-const calcAverage = function (arr) {
-    let sum = 0;
-    for(let i=0;i<arr.length;i++)
-    {
-        sum = sum + arr[i];
-    }
-    return sum/arr.length;
-}
+// console.log(arr);
+// console.log(`The average is ${calcAverage(arr)}.`);
 
-console.log(arr);
-console.log(`The average is ${calcAverage(arr)}.`)
+// "use strict";
+// const temp1 = [22, 34, 56, 52, "error", 12, 45, 34];
+// const temp2 = [33, -67, 78, 9, 6, 23, "error", 99];
+
+// const mergeArray = function (arr1, arr2) {
+//   let arr3 = [];
+//   console.log(arr1);
+//   console.log(arr2);
+//   arr3 = arr1;
+//   for (let i = 0; i < arr2.length; i++) {
+//     arr3.push(arr2[i]);
+//   }
+//   return arr3;
+// };
+
+// const tempAmplitude = function (arr1, arr2) {
+//   let temp = mergeArray(arr1, arr2);
+//   let temperature = [];
+//   let j = 0;
+//   for (let i = 0; i < temp.length; i++) {
+//     if (typeof temp[i] === "number") {
+//       temperature[j] = temp[i];
+//       j++;
+//     }
+//   }
+//   console.log(temperature);
+//   let maxTemp = temperature[0];
+//   let minTemp = temperature[0];
+//   for (let i = 0; i < temperature.length; i++) {
+//     if (temperature[i] > maxTemp) {
+//       maxTemp = temperature[i];
+//     }
+//     if (temperature[i] < minTemp) {
+//       minTemp = temperature[i];
+//     }
+//   }
+//   console.log(
+//     `Temperature amplitude between ${maxTemp} and ${minTemp} is ${
+//       maxTemp - minTemp
+//     }.`
+//   );
+// };
+
+// tempAmplitude(temp1, temp2);
+
+"use strict";
+
+const forecastTemp1 = [17, 21, 23];
+const forecastTemp2 = [12, 5, -5, 0, 4];
+
+const displayThermo = function (arr) {
+  let str = "";
+  for (let i = 0; i < arr.length; i++) {
+    str += `...${arr[i]}°C in ${i + 1} days`;
+    if (i === arr.length - 1) str += "...";
+  }
+  console.log(str);
+};
+
+displayThermo(forecastTemp1);
