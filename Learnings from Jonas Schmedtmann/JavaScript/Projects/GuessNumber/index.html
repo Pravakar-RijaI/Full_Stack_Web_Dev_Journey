@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess Number</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <main class="main">
@@ -13,19 +14,25 @@
       </section>
       <section class="main-content">
         <h1 class="main-content__title">Guess My Number!</h1>
-        <h2 class="main-content__actual-number">23</h2>
-        <p class="main-content__message">Message</p>
+        <div class="line"></div>
+        <div class="back">
+          <h2 class="main-content__actual-number">?</h2>
+        </div>
+        <p class="main-content__message">Start Guessing...</p>
         <input type="number" name="Guess" class="Guess" />
-        <button class="main-content__check">Check!</button>
+        <button class="main-content__check" onclick="checkNumber()">
+          Check!
+        </button>
         <p class="main-content__score-msg">
           Score:
           <span class="main-content__score">12</span>
         </p>
-        <p class="main-content__score-msg">
+        <p class="main-content__highscore-msg">
           Highscore:
-          <span class="main-content__score">0</span>
+          <span class="main-content__highscore">0</span>
         </p>
       </section>
     </main>
+    <script src="./main.js"></script>
   </body>
 </html>
