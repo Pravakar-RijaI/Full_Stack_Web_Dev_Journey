@@ -9,7 +9,7 @@
 
 /* ||VARIABLE DECLARATIONS */
 :root {
-  --BGCLR: #333;
+  --BGCLR: black;
   --FONTCLR: whitesmoke;
 
   --FF: "Press Start 2P";
@@ -17,6 +17,8 @@
 
 /* || GENERAL STYLES */
 .main {
+  display: grid;
+  grid-template-rows: 20vh 1fr;
   min-height: 100vh;
   min-width: 100%;
   font-family: var(--FF);
@@ -25,6 +27,10 @@
 }
 
 .header {
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   padding: 1rem;
 }
 
@@ -32,42 +38,54 @@
   cursor: pointer;
   font: inherit;
   padding: 1rem;
+  width: 200px;
   font-size: 1.25rem;
-  text-align: left;
+  text-align: center;
 }
 
 .header__boundary {
-  text-align: right;
+  text-align: center;
+  padding: 1rem;
+  grid-column: 2/3;
+  grid-row: 1/2;
 }
 
 .main-content {
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 30vw 1fr 20vw;
+  grid-template-rows: 14vh 16vh 15vh 12vh 1fr;
   padding: 1.5rem;
 }
 
 .main-content__title {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  padding: 1rem;
   font-size: 2rem;
   text-align: center;
 }
 
 .line {
-  position: absolute;
-  left: 45vw;
-  top: 29vh;
+  grid-column: 1/4;
+  grid-row: 2/3;
+  margin-top: 50px;
   background-color: var(--FONTCLR);
   height: 6px;
 }
 
 .back {
-  z-index: 0;
+  margin: auto;
   text-align: center;
-  width: 100px;
+  width: 120px;
   height: 100px;
-  position: absolute;
-  left: 45vw;
-  top: 29vh;
+  grid-column: 2/3;
+  grid-row: 2/3;
   background-color: var(--FONTCLR);
 }
 .main-content__actual-number {
+  grid-column: 2/3;
+  grid-row: 2/3;
   color: var(--BGCLR);
   margin-top: 2rem;
   font-size: 3rem;
@@ -75,22 +93,23 @@
 }
 
 .main-content__message {
-  position: absolute;
-  bottom: 14rem;
-  right: 30rem;
-  text-align: right;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  display: grid;
+  place-content: center;
+  text-align: center;
 }
 
 .Guess {
-  position: absolute;
-  left: 15rem;
-  bottom: 12rem;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  width: 250px;
   font: inherit;
+  height: 100px;
+  margin: auto;
   background-color: var(--BGCLR);
   border: 4px solid var(--FONTCLR);
-  height: 5rem;
-  width: 10rem;
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-align: center;
   color: var(--FONTCLR);
 }
@@ -99,23 +118,25 @@
   cursor: pointer;
   font: inherit;
   padding: 1rem;
+  width: 200px;
+  height: 55px;
+  margin: auto;
   font-size: 1.25rem;
-  text-align: left;
-  position: absolute;
-  left: 15rem;
-  bottom: 7rem;
+  text-align: center;
+  grid-column: 1/2;
+  grid-row: 4/5;
 }
 
 .main-content__score-msg {
   padding: 2rem;
-  position: absolute;
-  bottom: 10rem;
-  right: 32rem;
+  grid-column: 2/3;
+  grid-row: 4/5;
+  text-align: center;
 }
 
 .main-content__highscore-msg {
   padding: 2rem;
-  position: absolute;
-  bottom: 8rem;
-  right: 32rem;
+  grid-column: 2/3;
+  grid-row: 5/6;
+  text-align: center;
 }
