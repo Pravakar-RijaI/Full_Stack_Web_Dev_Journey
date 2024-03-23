@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 100%;
+  min-height: 100vh;
+  padding: 1.75rem;
+  background-color: green;
+  background-image: linear-gradient(to top left, #28b487, #7dd567);
+}
+
+.show-modal {
+  cursor: pointer;
+  font: inherit;
+  margin-inline: 0.75rem;
+  padding: 0.75rem 1.75rem 0.75rem 1.75rem;
+  border-radius: 19px;
+  border: none;
+  font-weight: bold;
+  box-shadow: 5px 5px 10px black;
+}
+
+.show-modal:hover {
+  color: hsla(0, 0%, 0%, 0.836);
+  box-shadow: 5px 5px 15px black;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-window {
+  z-index: 1;
+  margin: auto;
+  position: relative;
+  padding: 2.5rem;
+  background-color: white;
+  color: black;
+  width: 395px;
+  height: 305px;
+}
+
+.close-modal {
+  cursor: pointer;
+  border: none;
+  font-size: 2rem;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+}
+
+.modal__heading {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.modal__detail {
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  filter: blur(3px);
+}
