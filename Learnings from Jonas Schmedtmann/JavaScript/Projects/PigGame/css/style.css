@@ -135,3 +135,11 @@
   background-color: var(--CONTROLSCLR);
   grid-row: 8/9;
 }
+
+.winner::after {
+  font-size: 2rem;
+  font-weight: bold;
+  content: "🥇 WINNER 🥇";
+
+  background-color: transparent;
+}
