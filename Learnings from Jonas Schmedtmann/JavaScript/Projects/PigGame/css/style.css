@@ -10,8 +10,8 @@
   /* COLORS */
   --HEADFONTCLR: black;
   --HEADSCORECLR: #bf2e34;
-  --PLYAREA1BGCLR: rgba(245, 245, 245, 0.788);
-  --PLYAREA2BGCLR: rgba(245, 245, 245, 0.438);
+  --PLAYERACTIVEBGCLR: rgba(245, 245, 245, 0.788);
+  --PLAYERINACTIVEBGCLR: rgba(245, 245, 245, 0.438);
   --CONTROLSCLR: whitesmoke;
   --BGCLR: red;
   --BGIMG: linear-gradient(to top left, #753682 0%, var(--HEADSCORECLR) 100%);
@@ -43,16 +43,14 @@
   grid-template-columns: 1fr 20% 1fr;
 }
 
-.player1area {
-  background-color: var(--PLYAREA1BGCLR);
-}
-
-.player2area {
-  background-color: var(--PLYAREA2BGCLR);
-}
 .playerarea {
   display: grid;
   grid-template-rows: 20% 10% 15% 20% 15% 20%;
+  background-color: var(--PLAYERINACTIVEBGCLR);
+}
+
+.player-active {
+  background-color: var(--PLAYERACTIVEBGCLR);
 }
 
 .playerarea__heading {
