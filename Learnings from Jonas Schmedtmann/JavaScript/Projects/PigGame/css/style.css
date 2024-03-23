@@ -8,6 +8,133 @@
 /* ||VARIABLE DECLARATIONS */
 :root {
   /* COLORS */
-
+  --HEADFONTCLR: black;
+  --HEADSCORECLR: #bf2e34;
+  --PLYAREA1BGCLR: rgba(245, 245, 245, 0.788);
+  --PLYAREA2BGCLR: rgba(245, 245, 245, 0.438);
+  --CONTROLSCLR: whitesmoke;
+  --BGCLR: red;
+  --BGIMG: linear-gradient(to top left, #753682 0%, var(--HEADSCORECLR) 100%);
   /* SIZE */
+  /* FONTS */
+  --FF: "Nunito";
+}
+
+/* ||GENERAL STYLES */
+.main {
+  font-family: var(--FF);
+  font-weight: 400;
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  grid-template-rows: 10% 1fr 10%;
+  min-width: 100vw;
+  min-height: 100vh;
+  color: var(--HEADFONTCLR);
+  background-color: var(--BGCLR);
+  background-image: var(--BGIMG);
+}
+
+.playarea {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-color: var(--PLYAREABGCLR);
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 20% 1fr;
+}
+
+.player1area {
+  background-color: var(--PLYAREA1BGCLR);
+}
+
+.player2area {
+  background-color: var(--PLYAREA2BGCLR);
+}
+.playerarea {
+  display: grid;
+  grid-template-rows: 20% 10% 15% 20% 15% 20%;
+}
+
+.playerarea__heading {
+  font-size: 2rem;
+  grid-row: 2/3;
+}
+
+.playerarea__finalscore {
+  font-size: 3rem;
+  color: var(--HEADSCORECLR);
+  grid-row: 3/4;
+}
+
+.playerarea__scorearea {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  margin-inline: auto;
+  border-radius: 10px;
+  width: 180px;
+  background-color: var(--HEADSCORECLR);
+  color: var(--CONTROLSCLR);
+  grid-row: 5/6;
+}
+
+.playerarea__currentscore {
+  font-size: 1.5rem;
+}
+
+.controls {
+  display: grid;
+  grid-template-rows: 8% 10% 10% 25% 10% 10% 5% 10% 12%;
+  place-content: center;
+}
+
+.controls__newgame {
+  font: inherit;
+  font-weight: bold;
+  width: 150px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: var(--CONTROLSCLR);
+  grid-row: 2/3;
+}
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+}
+
+.controls__figure {
+  grid-row: 4/5;
+  display: grid;
+  place-content: center;
+}
+
+.figure__dice {
+  width: 100px;
+}
+
+.controls__rolldice {
+  font: inherit;
+  font-weight: bold;
+  width: 150px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: var(--CONTROLSCLR);
+  grid-row: 6/7;
+}
+
+.controls__hold {
+  font: inherit;
+  font-weight: bold;
+  width: 150px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: var(--CONTROLSCLR);
+  grid-row: 8/9;
 }

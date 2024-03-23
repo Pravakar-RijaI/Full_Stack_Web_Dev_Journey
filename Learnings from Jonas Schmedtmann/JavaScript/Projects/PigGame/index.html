@@ -2,36 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="author" content="Pravakar Rijal" />
+    <meta
+      name="description"
+      content="This website contains a interactive game with dice."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pig Game</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main class="main">
       <section class="playarea">
-        <section class="player1area">
-          <h1 class="player1area__heading">PLAYER 1</h1>
-          <p class="player1area__finalscore">43</p>
-          <section class="player1area__scorearea">
-            <p class="player1area__detail">CURRENT</p>
-            <p class="player1area__currentscore">0</p>
+        <section class="playerarea player1area">
+          <h1 class="playerarea__heading">PLAYER 1</h1>
+          <p class="playerarea__finalscore">43</p>
+          <section class="playerarea__scorearea">
+            <p class="playerarea__detail">CURRENT</p>
+            <p class="playerarea__currentscore">0</p>
           </section>
         </section>
         <section class="controls">
-            <button class="controls__newgame">NEW GAME</button>
-            <figure class="figure">
-                <img src="./img/dice1.png" alt="Rolled Dice with 1 Notation" class="figure__dice">
-                <figcaption class="hidden">Picture of Dice</figcaption>
-            </figure>
-            <button class="controls__rolldice">ROLL DICE</button>
-            <button class="controls__hold">HOLD</button>
+          <button class="controls__newgame">♻ NEW GAME</button>
+          <figure class="controls__figure">
+            <img
+              src="./img/dice-1.png"
+              alt="Rolled Dice with 1 Notation"
+              class="figure__dice"
+            />
+            <figcaption class="hidden">Picture of Dice</figcaption>
+          </figure>
+          <button class="controls__rolldice">🎲 ROLL DICE</button>
+          <button class="controls__hold">🤚 HOLD</button>
         </section>
-        <section class="player2area"></section>
-        <h1 class="player2area__heading">PLAYER 2</h1>
-          <p class="player2area__finalscore">24</p>
-          <section class="player2area__scorearea">
-            <p class="player2area__detail">CURRENT</p>
-            <p class="player2area__currentscore">0</p>
+        <section class="playerarea player2area">
+          <h1 class="playerarea__heading">PLAYER 2</h1>
+          <p class="playerarea__finalscore">24</p>
+          <section class="playerarea__scorearea">
+            <p class="playerarea__detail">CURRENT</p>
+            <p class="playerarea__currentscore">0</p>
+          </section>
+        </section>
       </section>
     </main>
+    <script src="./main.js"></script>
   </body>
 </html>
