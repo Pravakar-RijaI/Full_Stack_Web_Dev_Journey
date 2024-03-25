@@ -52,7 +52,7 @@ const [team1GK, ...team1FieldPlayers] = team1Players;
 console.log(team1GK, team1FieldPlayers);
 
 //Create a array with all the team players
-const [...allPlayers] = [...team1Players, ...team2Players];
+const allPlayers = [...team1Players, ...team2Players];
 console.log(allPlayers);
 
 //Add three new substitute players in order to have final players
