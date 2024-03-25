@@ -71,7 +71,7 @@ const printGoals = function (...noOfPlayers) {
     console.log(`Goals Scored: ${noOfPlayers.length}`);
 }
 printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
-printGoals(game.scored);
+printGoals(...game.scored);
 
 //Print in console team most likely to win without using if/else or tertiary statements
-
+console.log(`${team1 > team2 && game.team2 || game.team1} is more likely to win.`);
