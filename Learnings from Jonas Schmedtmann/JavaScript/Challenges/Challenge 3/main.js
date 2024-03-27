@@ -133,6 +133,7 @@ console.log(events);
 gameEvents.delete(64);
 console.log(gameEvents);
 
+//Find average events time
 const [...time] = gameEvents.keys();
 let sumTime = 0;
 let avgTimeArray = [];
@@ -142,11 +143,10 @@ for (let i = 0; i < time.length; i++) {
         sumTime += avgTimeArray[i];
     }
 }
-
 const avgTime = Math.round(sumTime / avgTimeArray.length);
-
 console.log(`An event happened, on average every ${avgTime} minutes.`);
 
+//Display events according to halves
 for (let [key, value] of gameEvents) {
     if (key <= 45)
         console.log(`[FIRST HALF]${key} : ${value}`);
