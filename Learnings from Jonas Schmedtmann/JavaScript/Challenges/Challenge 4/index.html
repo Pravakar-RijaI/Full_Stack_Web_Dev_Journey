@@ -8,14 +8,14 @@
   </head>
   <body>
     <main class="main">
-      <section class="main__section">
-        <h1 class="main__heading">camelCase Convertor</h1>
+      <h1 class="main__heading">underscore_case To camelCase</h1>
+      <section class="main__form-section">
         <form action="" class="main__form" onsubmit="return false">
           <fieldset class="main__form-boundary">
             <legend class="main__form-legend">
-              &nbsp;Enter the details&nbsp;
+              &nbsp;Enter the details:&nbsp;
             </legend>
-            <section class="formbody">
+            <section class="main__formbody">
               <p class="main__line">
                 <label for="textinput" class="main__label"
                   >Enter List of Variables:</label
@@ -26,12 +26,44 @@
                   name="textinput"
                   id="textinput"
                   class="textinput"
+                  placeholder="underscore_case"
                   cols="30"
                   rows="6"
                 ></textarea>
               </p>
               <p class="main__line">
                 <input type="submit" value="Submit" class="main__submit" />
+                <input type="reset" value="Reset" class="main__reset" />
+              </p>
+            </section>
+          </fieldset>
+        </form>
+      </section>
+      <section class="main__display">
+        <form action="" class="main__form" onsubmit="return false">
+          <fieldset class="main__form-boundary">
+            <legend class="main__form-legend">
+              &nbsp;Get the details: &nbsp;
+            </legend>
+            <section class="main__formbody">
+              <p class="main__line">
+                <label for="textdisplay" class="main__label"
+                  >Get List of Variables:</label
+                >
+              </p>
+              <p class="main__line">
+                <textarea
+                  name="textdisplay"
+                  id="textdisplay"
+                  class="textdisplay"
+                  cols="30"
+                  rows="6"
+                  placeholder="underscoreCase"
+                  readonly
+                ></textarea>
+              </p>
+              <p class="main__line">
+                <input type="submit" value="Copy" class="main__copy" />
                 <input type="reset" value="Reset" class="main__reset" />
               </p>
             </section>

@@ -21,22 +21,29 @@
 
 /* ||GENERAL STYLES */
 .main {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   width: 100%;
   height: 100vh;
   color: var(--FONTCLR);
   background-color: var(--BGCLR);
   background-image: var(--BGIMG);
   display: grid;
-  grid-template-columns: 10% 1fr 10%;
-  grid-template-rows: 5% 1fr 5%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 10% 1fr 5%;
 }
 
-.main__section {
-  grid-column: 2/2;
+.main__form-section {
+  grid-column: 1/2;
+  grid-row: 2/2;
+}
+
+.main__display {
+  grid-column: 2/3;
   grid-row: 2/2;
 }
 
 .main__heading {
+  grid-column: 1/3;
   text-align: center;
   padding: var(--FONTXL);
   font-size: var(--FONTXXXL);
@@ -62,7 +69,7 @@
   font-size: var(--FONTXXL);
 }
 
-.formbody {
+.main__formbody {
   display: grid;
   place-content: center;
 }
@@ -71,16 +78,24 @@
 }
 
 .textinput {
+  padding: 0.25rem;
   font: inherit;
   font-size: var(--FONTXXL);
 }
 .main__submit,
+.main__copy,
 .main__reset {
-  margin-top: 0.5rem;
+  margin: 0.5rem 1rem 0 0;
   font-size: 1.5rem;
   padding: 0.5rem;
   padding-inline: 1rem;
   color: var(--FONTCLR);
   background-color: var(--SECCLR);
   border-radius: 15px;
+}
+
+.main__display .textdisplay {
+  padding: 0.25rem;
+  font: inherit;
+  font-size: var(--FONTXXL);
 }
