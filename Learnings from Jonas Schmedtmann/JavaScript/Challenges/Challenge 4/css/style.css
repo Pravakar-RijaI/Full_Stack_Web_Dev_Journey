@@ -1,0 +1,86 @@
+/* ||RESET STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ||VARIABLE DECLARATIONS */
+:root {
+  /* COLORS */
+  --BGCLR: blue;
+  --BGIMG: linear-gradient(to top left, dodgerblue, firebrick);
+  --FONTCLR: whitesmoke;
+  --SECCLR: firebrick;
+
+  /* FONT */
+  --FONTXL: 1rem;
+  --FONTXXL: 2rem;
+  --FONTXXXL: 3rem;
+}
+
+/* ||GENERAL STYLES */
+.main {
+  width: 100%;
+  height: 100vh;
+  color: var(--FONTCLR);
+  background-color: var(--BGCLR);
+  background-image: var(--BGIMG);
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  grid-template-rows: 5% 1fr 5%;
+}
+
+.main__section {
+  grid-column: 2/2;
+  grid-row: 2/2;
+}
+
+.main__heading {
+  text-align: center;
+  padding: var(--FONTXL);
+  font-size: var(--FONTXXXL);
+}
+
+.main__form {
+  margin: var(--FONTXL);
+  padding: var(--FONTXL);
+}
+
+.main__form-boundary {
+  padding-top: var(--FONTXXL);
+  padding-inline: var(--FONTXXXL);
+  color: var(--FONTCLR);
+  border: 5px double var(--FONTCLR);
+}
+
+.main__line {
+  padding-bottom: var(--FONTXL);
+}
+
+.main__form-legend {
+  font-size: var(--FONTXXL);
+}
+
+.formbody {
+  display: grid;
+  place-content: center;
+}
+.main__label {
+  font-size: var(--FONTXXL);
+}
+
+.textinput {
+  font: inherit;
+  font-size: var(--FONTXXL);
+}
+.main__submit,
+.main__reset {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  padding-inline: 1rem;
+  color: var(--FONTCLR);
+  background-color: var(--SECCLR);
+  border-radius: 15px;
+}
