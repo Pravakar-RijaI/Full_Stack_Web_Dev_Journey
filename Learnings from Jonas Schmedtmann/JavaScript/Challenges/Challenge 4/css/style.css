@@ -1,4 +1,5 @@
 /* ||RESET STYLES */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,20 +7,24 @@
 }
 
 /* ||VARIABLE DECLARATIONS */
+
 :root {
   /* COLORS */
+
   --BGCLR: blue;
   --BGIMG: linear-gradient(to top left, dodgerblue, firebrick);
   --FONTCLR: whitesmoke;
   --SECCLR: firebrick;
 
   /* FONT */
+
   --FONTXL: 1rem;
   --FONTXXL: 2rem;
   --FONTXXXL: 3rem;
 }
 
 /* ||GENERAL STYLES */
+
 .main {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   width: 100%;
@@ -73,6 +78,7 @@
   display: grid;
   place-content: center;
 }
+
 .main__label {
   font-size: var(--FONTXXL);
 }
@@ -82,6 +88,7 @@
   font: inherit;
   font-size: var(--FONTXXL);
 }
+
 .main__submit,
 .main__copy,
 .main__reset {
