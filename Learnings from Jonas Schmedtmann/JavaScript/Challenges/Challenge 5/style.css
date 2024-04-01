@@ -42,7 +42,7 @@
   place-content: center;
 }
 
-.buyplane__btn {
+.btn {
   font: inherit;
   font-size: 2rem;
   background-color: var(--FONTCLR);
@@ -56,6 +56,17 @@
   padding: 0.25rem;
 }
 
+.btn:hover {
+  background-color: hsla(0, 0%, 100%, 0.774);
+}
+
 .luft-planes {
   font-size: 5rem;
+}
+
+.main__poll {
+  grid-column: 2/2;
+  grid-row: 3/4;
+  text-align: center;
+  place-content: center;
 }
