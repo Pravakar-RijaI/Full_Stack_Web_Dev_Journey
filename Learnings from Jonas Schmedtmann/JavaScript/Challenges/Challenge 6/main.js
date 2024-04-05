@@ -147,9 +147,9 @@ const displayMovements = function (movements) {
     })
 }
 
-const displayBalance = function (movements) {
-    const balance = movements.reduce((acc, cur) => acc + cur, 0);
-    labelBalance.textContent = balance + " €";
+const displayBalance = function (account) {
+    account.balance = account.movements.reduce((acc, cur) => acc + cur, 0);
+    labelBalance.textContent = account.balance + " €";
 }
 
 const calcDisplaySummary = function (account) {
@@ -162,24 +162,70 @@ const calcDisplaySummary = function (account) {
     labelSumInterest.textContent = sumInterest + " €";
 }
 
+
+const updateUI = function (account) {
+    displayMovements(account.movements);
+    displayBalance(account);
+    calcDisplaySummary(account);
+}
+let currentUser;
+
 btnLogin.addEventListener("click", function (e) {
     e.preventDefault();
 
-    const user = accounts.find(account => account.username == inputLoginUsername.value);
-    if (user?.pin === Number(inputLoginPin.value)) {
+    currentUser = accounts.find(account => account.username == inputLoginUsername.value);
+    if (currentUser?.pin === Number(inputLoginPin.value)) {
         containerApp.style.opacity = 100;
         inputLoginUsername.value = inputLoginPin.value = "";
         inputLoginPin.blur();
-        labelWelcome.textContent = "Welcome back, " + user.owner.split(' ')[0] + " !!";
-        displayMovements(user.movements);
-        displayBalance(user.movements);
-        calcDisplaySummary(user);
+        labelWelcome.textContent = "Welcome back, " + currentUser.owner.split(' ')[0] + " !!";
+        updateUI(currentUser);
     }
-    else if (user || user.pin) {
+    else if (!currentUser || !currentUser.pin) {
         containerApp.style.opacity = 0;
         labelWelcome.textContent = "Incorrect Credentials !!!";
-
     }
 
-})
+});
+
+btnTransfer.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const receiverAcc = accounts.find(account => account.username === inputTransferTo.value.trim());
+    if (receiverAcc && receiverAcc.username != currentUser.username) {
+        const transferAmount = Number(inputTransferAmount.value);
+        if (transferAmount > 0 && currentUser.balance >= transferAmount) {
+            inputTransferTo.value = inputTransferAmount.value = "";
+            inputTransferAmount.blur();
+            currentUser.movements.push(-transferAmount);
+            updateUI(currentUser);
+            receiverAcc.movements.push(transferAmount);
+            labelWelcome.textContent = "Balance Transfer Successful !!!";
+
+        } else {
+            inputTransferTo.value = inputTransferAmount.value = "";
+            labelWelcome.textContent = "Invalid Balance !!!";
+        }
+    }
+    else {
+        inputTransferTo.value = inputTransferAmount.value = "";
+        labelWelcome.textContent = "Invalid User !!!";
+    }
+});
+
+btnClose.addEventListener("click", function (e) {
+    e.preventDefault();
+    const deleteUsername = inputCloseUsername.value;
+    const deletePin = Number(inputClosePin.value);
+    if (currentUser.username === deleteUsername && currentUser.pin === deletePin) {
+        const deleteIndex = accounts.findIndex((account) => account.username === deleteUsername);
+        containerApp.style.opacity = 0;
+        labelWelcome.textContent = `User ${accounts[deleteIndex].owner.split(' ').at(0)} deleted Successfully.`;
+        accounts.splice(deleteIndex, 1);
+    }
+    else {
+        inputCloseUsername.value = inputClosePin.value = "";
+        labelWelcome.textContent = "Invalid Credentials !!!";
+    }
+});
 /////////////////////////////////////////////////
