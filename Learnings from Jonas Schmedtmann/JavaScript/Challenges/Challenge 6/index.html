@@ -3,12 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="shortcut icon" type="image/png" href="./icon.png" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="main.css" />
     <title>Bankist</title>
   </head>
@@ -18,19 +13,25 @@
       <p class="welcome">Log in to get started</p>
       <img src="./logo.png" alt="Logo" class="logo" />
       <form class="login">
+        <label for="user" class="hidden">User</label>
         <input
+          id="user"
           type="text"
+          name="user"
           placeholder="user"
           class="login__input login__input--user"
         />
         <!-- In practice, use type="password" -->
+        <label for="pin" class="hidden">Pin</label>
         <input
           type="text"
+          name="pin"
+          id="pin"
           placeholder="PIN"
           maxlength="4"
           class="login__input login__input--pin"
         />
-        <button class="login__btn">&rarr;</button>
+        <button type="submit" class="login__btn">&rarr;</button>
       </form>
     </nav>
 
@@ -77,11 +78,21 @@
       <div class="operation operation--transfer">
         <h2>Transfer money</h2>
         <form class="form form--transfer">
-          <input type="text" class="form__input form__input--to" />
-          <input type="number" class="form__input form__input--amount" />
-          <button class="form__btn form__btn--transfer">&rarr;</button>
-          <label class="form__label">Transfer to</label>
-          <label class="form__label">Amount</label>
+          <input
+            type="text"
+            id="transfer-to"
+            class="form__input form__input--to"
+          />
+          <input
+            type="number"
+            id="transfer-amount"
+            class="form__input form__input--amount"
+          />
+          <button type="submit" class="form__btn form__btn--transfer">
+            &rarr;
+          </button>
+          <label for="transfer-to" class="form__label">Transfer to</label>
+          <label for="transfer-amount" class="form__label">Amount</label>
         </form>
       </div>
 
@@ -89,9 +100,17 @@
       <div class="operation operation--loan">
         <h2>Request loan</h2>
         <form class="form form--loan">
-          <input type="number" class="form__input form__input--loan-amount" />
-          <button class="form__btn form__btn--loan">&rarr;</button>
-          <label class="form__label form__label--loan">Amount</label>
+          <input
+            id="loan-amount"
+            type="number"
+            class="form__input form__input--loan-amount"
+          />
+          <button type="submit" class="form__btn form__btn--loan">
+            &rarr;
+          </button>
+          <label for="loan-amount" class="form__label form__label--loan"
+            >Amount</label
+          >
         </form>
       </div>
 
@@ -99,15 +118,20 @@
       <div class="operation operation--close">
         <h2>Close account</h2>
         <form class="form form--close">
-          <input type="text" class="form__input form__input--user" />
           <input
+            id="confirm-user"
+            type="text"
+            class="form__input form__input--user"
+          />
+          <input
+            id="confirm-pin"
             type="password"
             maxlength="6"
             class="form__input form__input--pin"
           />
           <button class="form__btn form__btn--close">&rarr;</button>
-          <label class="form__label">Confirm user</label>
-          <label class="form__label">Confirm PIN</label>
+          <label for="confirm-user" class="form__label">Confirm user</label>
+          <label for="confirm-pin" class="form__label">Confirm PIN</label>
         </form>
       </div>
 

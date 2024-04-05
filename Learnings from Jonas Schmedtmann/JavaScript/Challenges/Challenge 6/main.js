@@ -1,56 +1,63 @@
 'use strict';
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// CHALLENGES
 
-//Challenge 1
-const dogsJulia = [3, 5, 2, 12, 7];
-const dogsKate = [4, 1, 15, 8, 3];
+// //Challenge 1
+// const dogsJulia = [3, 5, 2, 12, 7];
+// const dogsKate = [4, 1, 15, 8, 3];
 
-// const dogsJulia = [9, 16, 6, 8, 3];
-// const dogsKate = [10, 5, 6, 1, 4];
-
-
-const dogsAge = function (value, index) {
-    if (value >= 3)
-        console.log(`Dog number ${index + 1} is an adult, and is ${value} years old.`);
-    else
-        console.log(`Dog number ${index + 1} is still a puppy🐶.`);
-}
+// // const dogsJulia = [9, 16, 6, 8, 3];
+// // const dogsKate = [10, 5, 6, 1, 4];
 
 
-const checkDogs = function (dogsJulia, dogsKate) {
-    let [...Juliadogs] = dogsJulia;
-    Juliadogs = Juliadogs.splice(1, 2);
-    const [...dogs] = [...Juliadogs, ...dogsKate];
-    dogs.forEach(dogsAge);
-};
+// const dogsAge = function (value, index) {
+//     if (value >= 3)
+//         console.log(`Dog number ${index + 1} is an adult, and is ${value} years old.`);
+//     else
+//         console.log(`Dog number ${index + 1} is still a puppy🐶.`);
+// }
 
-checkDogs(dogsJulia, dogsKate);
 
-//Challenge 2
-const dogsAges = [5, 2, 4, 1, 15, 8, 3];
-// const dogsAges = [16, 6, 10, 5, 6, 1, 4];
+// const checkDogs = function (dogsJulia, dogsKate) {
+//     let [...Juliadogs] = dogsJulia;
+//     Juliadogs = Juliadogs.splice(1, 2);
+//     const [...dogs] = [...Juliadogs, ...dogsKate];
+//     dogs.forEach(dogsAge);
+// };
 
-const calcAverageHumanAge = function (ages) {
-    const dogAges = ages.map(function (dogAge) {
-        return dogAge <= 2 ? dogAge * 2 : 16 + dogAge * 4;
-    });
-    console.log(dogAges);
-    const dogAges18 = dogAges.filter(function (age) {
-        return age < 18;
-    });
-    console.log(dogAges18);
-    let dogsAverageAge = dogAges18.reduce(function (acc, cur) {
-        return acc + cur;
-    }, 0);
-    dogsAverageAge /= dogAges18.length;
-    console.log(dogsAverageAge);
+// checkDogs(dogsJulia, dogsKate);
 
-    let str = "";
-    dogAges18.forEach((value, i) => str += `Dog ${i + 1} Age in Human Years: ${value} years.\n`);
-    str += `Average Age of Dogs: ${dogsAverageAge} years.`
-    return str;
-};
+// //Challenge 2
+// const dogsAges = [5, 2, 4, 1, 15, 8, 3];
+// // const dogsAges = [16, 6, 10, 5, 6, 1, 4];
 
-console.log(calcAverageHumanAge(dogsAges));
+// const calcAverageHumanAge = function (ages) {
+//     const humanAges = ages.map(dogAge => dogAge <= 2 ? dogAge * 2 : 16 + dogAge * 4);
+//     const adultDogs = humanAges.filter(age => age >= 18);
+//     const dogsAverageAge = adultDogs.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
+
+//     let str = "";
+//     adultDogs.forEach((value, i) => str += `Dog ${i + 1} Age in Human Years: ${value} years.\n`);
+//     str += `\nAverage Age of Dogs: ${dogsAverageAge} years.\n`
+//     return str;
+// };
+
+// //Challenge 3
+// const calcAverageHumanAge = function (dogsAges) {
+//     const averageAdultDogAge =
+//         dogsAges
+//             .map((dogAge) => dogAge <= 2 ? dogAge * 2 : 16 + dogAge * 4)
+//             .filter(adultAge => adultAge >= 18)
+//             .reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
+
+//     return `Average Age of Dogs older than 18 Human Years: ${averageAdultDogAge} years.`;
+// }
+
+// console.log(calcAverageHumanAge(dogsAges));
+
+
+/////////////////////////////////////////////////
 
 
 
@@ -119,13 +126,13 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 // LECTURES
 
-const currencies = new Map([
-    ['USD', 'United States dollar'],
-    ['EUR', 'Euro'],
-    ['GBP', 'Pound sterling'],
-]);
+const createUsername = function (accounts) {
+    accounts.forEach(function (account) {
+        account.username = account.owner.toLowerCase().split(' ').map((value) => value[0]).join('');
+    })
+};
 
-//const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+createUsername(accounts);
 
 const displayMovements = function (movements) {
     containerMovements.innerHTML = "";
@@ -133,19 +140,46 @@ const displayMovements = function (movements) {
         const type = (value > 0) ? "deposit" : "withdrawal";
         const html = `<div class="movements__row">
           <div class="movements__type movements__type--${type}">${i + 1} ${type}</div>
-          <div class="movements__value">${value}€</div>
+          <div class="movements__value">${value} €</div>
         </div>`;
 
         containerMovements.insertAdjacentHTML("afterbegin", html);
     })
 }
 
-displayMovements(account1.movements);
-
-const displayBalance = function (account) {
-    const balance = account.movements.reduce((acc, cur) => acc + cur, 0);
+const displayBalance = function (movements) {
+    const balance = movements.reduce((acc, cur) => acc + cur, 0);
     labelBalance.textContent = balance + " €";
 }
 
-displayBalance(account1);
+const calcDisplaySummary = function (account) {
+    const sumIn = account.movements.filter(value => value > 0).reduce((acc, cur) => acc + cur, 0);
+    labelSumIn.textContent = sumIn + " €";
+    const sumOut = account.movements.filter(value => value < 0).reduce((acc, cur) => acc + Math.abs(cur), 0);
+    labelSumOut.textContent = sumOut + " €";
+
+    const sumInterest = account.movements.filter(value => value > 0).map(value => value * (account.interestRate) / 100).filter((value) => value >= 1).reduce((acc, cur) => acc + cur, 0);
+    labelSumInterest.textContent = sumInterest + " €";
+}
+
+btnLogin.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const user = accounts.find(account => account.username == inputLoginUsername.value);
+    if (user?.pin === Number(inputLoginPin.value)) {
+        containerApp.style.opacity = 100;
+        inputLoginUsername.value = inputLoginPin.value = "";
+        inputLoginPin.blur();
+        labelWelcome.textContent = "Welcome back, " + user.owner.split(' ')[0] + " !!";
+        displayMovements(user.movements);
+        displayBalance(user.movements);
+        calcDisplaySummary(user);
+    }
+    else if (user || user.pin) {
+        containerApp.style.opacity = 0;
+        labelWelcome.textContent = "Incorrect Credentials !!!";
+
+    }
+
+})
 /////////////////////////////////////////////////
