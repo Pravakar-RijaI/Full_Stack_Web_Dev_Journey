@@ -58,46 +58,46 @@
 
 // Challenge 4
 
-const dogs = [
-    { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
-    { weight: 8, curFood: 200, owners: ['Matilda'] },
-    { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
-    { weight: 32, curFood: 340, owners: ['Michael'] },
-];
+// const dogs = [
+//     { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
+//     { weight: 8, curFood: 200, owners: ['Matilda'] },
+//     { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
+//     { weight: 32, curFood: 340, owners: ['Michael'] },
+// ];
 
-dogs.forEach(dog => dog.recommendedFood = (dog.weight ** 0.75 * 28));
+// dogs.forEach(dog => dog.recommendedFood = (dog.weight ** 0.75 * 28));
 
-const findDog = function (owner) {
-    const ownerDog = dogs.find(value => value.owners.includes(owner));
+// const findDog = function (owner) {
+//     const ownerDog = dogs.find(value => value.owners.includes(owner));
 
-    if (ownerDog.curFood > ownerDog.recommendedFood)
-        console.log(`${owner}'s Dog is eating too much.`);
+//     if (ownerDog.curFood > ownerDog.recommendedFood)
+//         console.log(`${owner}'s Dog is eating too much.`);
 
-    else if (ownerDog.curFood < ownerDog.recommendedFood)
-        console.log(`${owner}'s Dog is eating too little.`);
+//     else if (ownerDog.curFood < ownerDog.recommendedFood)
+//         console.log(`${owner}'s Dog is eating too little.`);
 
-    else
-        console.log(`${owner}'s Dog is eating right.`);
+//     else
+//         console.log(`${owner}'s Dog is eating right.`);
 
-}
+// }
 
-findDog("Sarah");
+// findDog("Sarah");
 
-const ownersEatTooMuch = dogs.filter(value => value.curFood > value.recommendedFood).map(value => value.owners).flat();
-const ownersEatTooLittle = dogs.filter(value => value.curFood < value.recommendedFood).map(value => value.owners).flat();
+// const ownersEatTooMuch = dogs.filter(value => value.curFood > value.recommendedFood).map(value => value.owners).flat();
+// const ownersEatTooLittle = dogs.filter(value => value.curFood < value.recommendedFood).map(value => value.owners).flat();
 
-console.log(ownersEatTooMuch.join(" and ").concat("'s Dogs eat too much."));
-console.log(ownersEatTooLittle.join(" and ").concat("'s Dogs eat too little."));
+// console.log(ownersEatTooMuch.join(" and ").concat("'s Dogs eat too much."));
+// console.log(ownersEatTooLittle.join(" and ").concat("'s Dogs eat too little."));
 
-console.log(dogs.some(dog => dog.curFood === dog.recommendedFood));
+// console.log(dogs.some(dog => dog.curFood === dog.recommendedFood));
 
-const checkRightFood = dog => dog.curFood > dog.recommendedFood * 0.90 && dog.curFood < dog.recommendedFood * 1.10;
+// const checkRightFood = dog => dog.curFood > dog.recommendedFood * 0.90 && dog.curFood < dog.recommendedFood * 1.10;
 
-console.log(dogs.some(checkRightFood));
+// console.log(dogs.some(checkRightFood));
 
-console.log(dogs.filter(checkRightFood));
+// console.log(dogs.filter(checkRightFood));
 
-console.log(dogs.slice().sort((a, b) => a.recommendedFood - b.recommendedFood));
+// console.log(dogs.slice().sort((a, b) => a.recommendedFood - b.recommendedFood));
 
 
 
@@ -113,43 +113,43 @@ console.log(dogs.slice().sort((a, b) => a.recommendedFood - b.recommendedFood));
 
 // Data
 const account1 = {
-    owner: 'Jonas Schmedtmann',
+    owner: "Jonas Schmedtmann",
     movements: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300],
     interestRate: 1.2, // %
     pin: 1111,
 
     movementsDates: [
-        '2024-01-01T21:31:17.178Z',
-        '2024-01-11T07:42:02.383Z',
-        '2024-02-28T09:15:04.904Z',
-        '2024-03-01T10:17:24.185Z',
-        '2024-04-05T14:11:59.604Z',
-        '2024-04-07T17:01:17.194Z',
-        '2024-04-08T23:36:17.929Z',
-        '2024-04-10T10:51:36.790Z',
+        "2019-11-18T21:31:17.178Z",
+        "2019-12-23T07:42:02.383Z",
+        "2020-01-28T09:15:04.904Z",
+        "2020-04-01T10:17:24.185Z",
+        "2020-05-08T14:11:59.604Z",
+        "2020-07-26T17:01:17.194Z",
+        "2020-07-28T23:36:17.929Z",
+        "2020-08-01T10:51:36.790Z",
     ],
-    currency: 'EUR',
-    locale: 'pt-PT', // de-DE
+    currency: "EUR",
+    locale: "pt-PT", // de-DE
 };
 
 const account2 = {
-    owner: 'Jessica Davis',
+    owner: "Jessica Davis",
     movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
     interestRate: 1.5,
     pin: 2222,
 
     movementsDates: [
-        '2019-11-01T13:15:33.035Z',
-        '2019-11-30T09:48:16.867Z',
-        '2019-12-25T06:04:23.907Z',
-        '2020-01-25T14:18:46.235Z',
-        '2020-02-05T16:33:06.386Z',
-        '2020-04-10T14:43:26.374Z',
-        '2020-06-25T18:49:59.371Z',
-        '2020-07-26T12:01:20.894Z',
+        "2019-11-01T13:15:33.035Z",
+        "2019-11-30T09:48:16.867Z",
+        "2019-12-25T06:04:23.907Z",
+        "2020-01-25T14:18:46.235Z",
+        "2020-02-05T16:33:06.386Z",
+        "2020-04-10T14:43:26.374Z",
+        "2020-06-25T18:49:59.371Z",
+        "2020-07-26T12:01:20.894Z",
     ],
-    currency: 'USD',
-    locale: 'en-US',
+    currency: "USD",
+    locale: "en-US",
 };
 
 const accounts = [account1, account2];
@@ -193,7 +193,7 @@ const createUsername = function (accounts) {
 createUsername(accounts);
 
 
-const dateFormat = function (date1) {
+const dateFormat = function (acc, date1) {
     const now = new Date();
     const interval = Math.round(Math.abs(date1 - now) / (1000 * 60 * 60 * 24));
 
@@ -201,12 +201,14 @@ const dateFormat = function (date1) {
     else if (interval === 1) return "Yesterday";
     else if (interval <= 7) return interval + " days ago";
     else {
-        const year = `${date1.getFullYear()}`;
-        const month = `${date1.getMonth() + 1}`.padStart(2, 0);
-        const day = `${date1.getDate()}`.padStart(2, 0);
-        return `${year}/${month}/${day}`;
+        return new Intl.DateTimeFormat(acc.locale).format(date1);
     }
+
 }
+const formattedMov = function (account, number) {
+    return new Intl.NumberFormat(account.locale, { style: "currency", currency: account.currency }).format(number.toFixed(2));
+}
+
 const displayMovements = function (account, sort = false) {
     containerMovements.innerHTML = "";
 
@@ -214,31 +216,32 @@ const displayMovements = function (account, sort = false) {
 
     movs.forEach(function (value, i) {
         const date = new Date(account.movementsDates[i]);
-        const displayDate = dateFormat(date);
+        const displayDate = dateFormat(account, date);
         const type = (value > 0) ? "deposit" : "withdrawal";
         const html = `<div class="movements__row">
           <div class="movements__type movements__type--${type}">${i + 1} ${type}</div>
           <div class="movements__date">${displayDate}</div>
-          <div class="movements__value">${value.toFixed(2)} €</div>
+          <div class="movements__value">${formattedMov(account, value)}</div>
         </div>`;
 
         containerMovements.insertAdjacentHTML("afterbegin", html);
     })
 }
 
+
 const displayBalance = function (account) {
-    account.balance = account.movements.reduce((acc, cur) => acc + cur, 0).toFixed(2);
-    labelBalance.textContent = account.balance + " €";
+    account.balance = account.movements.reduce((acc, cur) => acc + cur, 0);
+    labelBalance.textContent = formattedMov(account, account.balance);
 }
 
 const calcDisplaySummary = function (account) {
     const sumIn = account.movements.filter(value => value > 0).reduce((acc, cur) => acc + cur, 0);
-    labelSumIn.textContent = sumIn.toFixed(2) + " €";
+    labelSumIn.textContent = formattedMov(account, sumIn);
     const sumOut = account.movements.filter(value => value < 0).reduce((acc, cur) => acc + Math.abs(cur), 0);
-    labelSumOut.textContent = sumOut.toFixed(2) + " €";
+    labelSumOut.textContent = formattedMov(account, sumOut);
 
     const sumInterest = account.movements.filter(value => value > 0).map(value => value * (account.interestRate) / 100).filter((value) => value >= 1).reduce((acc, cur) => acc + cur, 0);
-    labelSumInterest.textContent = sumInterest.toFixed(2) + " €";
+    labelSumInterest.textContent = formattedMov(account, sumInterest);;
 }
 
 let sorted = false;
@@ -246,6 +249,9 @@ btnSort.addEventListener("click", function (e) {
     e.preventDefault();
     displayMovements(currentUser, !sorted);
     sorted = !sorted;
+    clearInterval(timer);
+    timer = timeout();
+    clearWelcomeLabel();
 });
 
 const updateUI = function (account) {
@@ -253,7 +259,47 @@ const updateUI = function (account) {
     displayBalance(account);
     calcDisplaySummary(account);
 }
-let currentUser;
+
+const options = {
+    hour: "numeric",
+    minute: "numeric",
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    //weekday: "short"
+};
+
+
+const timeout = function () {
+    const tick = function () {
+        const min = String(Math.trunc(time / 60)).padStart(2, 0);
+        const sec = String(time % 60).padStart(2, 0);
+        labelTimer.textContent = `${min}:${sec}`;
+
+        if (time === 0) {
+            clearInterval(timer);
+            containerApp.style.opacity = 0;
+            labelWelcome.textContent = "Security Timeout !!";
+        }
+
+        time--;
+
+    };
+
+    let time = 120;
+
+    tick();
+    const timer = setInterval(tick, 1000);
+    return timer;
+}
+
+const clearWelcomeLabel = function (msg) {
+    setTimeout(function () {
+        labelWelcome.textContent = msg ? "Log in to get started" : "";
+    }, 1500);
+};
+
+let currentUser, timer;
 
 btnLogin.addEventListener("click", function (e) {
     e.preventDefault();
@@ -263,25 +309,24 @@ btnLogin.addEventListener("click", function (e) {
         containerApp.style.opacity = 100;
         inputLoginUsername.value = inputLoginPin.value = "";
         inputLoginPin.blur();
-        const now = new Date();
-        const year = `${now.getFullYear()}`;
-        const month = `${now.getMonth() + 1}`.padStart(2, 0);
-        const day = `${now.getDate()}`.padStart(2, 0);
-        const hour = `${now.getHours()}`.padStart(2, 0);
-        const min = `${now.getMinutes()}`.padStart(2, 0);
-        labelDate.textContent = `${year}/${month}/${day} ${hour}:${min}`;
+        if (timer) clearInterval(timer);
+        timer = timeout();
+        labelDate.textContent = new Intl.DateTimeFormat(currentUser.locale, options).format(new Date());
         labelWelcome.textContent = "Welcome back, " + currentUser.owner.split(' ')[0] + " !!";
         updateUI(currentUser);
     }
-    else if (!currentUser || !currentUser.pin) {
+    else {
         containerApp.style.opacity = 0;
         labelWelcome.textContent = "Incorrect Credentials !!!";
+        clearWelcomeLabel(true);
     }
 
 });
 
 btnTransfer.addEventListener("click", function (e) {
     e.preventDefault();
+    clearInterval(timer);
+    timer = timeout();
 
     const receiverAcc = accounts.find(account => account.username === inputTransferTo.value.trim());
     if (receiverAcc && receiverAcc.username != currentUser.username) {
@@ -295,34 +340,49 @@ btnTransfer.addEventListener("click", function (e) {
             receiverAcc.movements.push(transferAmount);
             receiverAcc.movementsDates.push(new Date().toISOString());
             labelWelcome.textContent = "Balance Transfer Successful !!!";
+            clearWelcomeLabel();
 
         } else {
             inputTransferTo.value = inputTransferAmount.value = "";
             labelWelcome.textContent = "Invalid Balance !!!";
+            clearWelcomeLabel();
         }
     }
     else {
         inputTransferTo.value = inputTransferAmount.value = "";
         labelWelcome.textContent = "Invalid User !!!";
+        clearWelcomeLabel();
     }
 });
 
 btnLoan.addEventListener("click", function (e) {
     e.preventDefault();
+    clearInterval(timer);
+    timer = timeout();
+
     const loanAmount = Math.floor(inputLoanAmount.value);
+    labelWelcome.textContent = "Validating the requirements..."
     if (loanAmount > 0 && currentUser.movements.some(value => value >= (10 / 100 * loanAmount))) {
-        currentUser.movements.push(loanAmount);
-        currentUser.movementsDates.push(new Date().toISOString());
-        labelWelcome.textContent = "Loan Approved !!!";
+        setTimeout(function () {
+            currentUser.movements.push(loanAmount);
+            currentUser.movementsDates.push(new Date().toISOString());
+            labelWelcome.textContent = "Loan Approved !!!";
+            updateUI(currentUser);
+        }, 3000);
     }
-    else
-        labelWelcome.textContent = "Insufficient Deposits !!!";
+    else {
+        setTimeout(function () { labelWelcome.textContent = "Insufficient Deposits !!!"; }, 1000);
+    }
+    clearWelcomeLabel();
     inputLoanAmount.value = "";
     updateUI(currentUser);
 })
 
 btnClose.addEventListener("click", function (e) {
     e.preventDefault();
+    clearInterval(timer);
+    timer = timeout();
+
     const deleteUsername = inputCloseUsername.value;
     const deletePin = Number(inputClosePin.value);
 
@@ -331,10 +391,13 @@ btnClose.addEventListener("click", function (e) {
         containerApp.style.opacity = 0;
         labelWelcome.textContent = `User ${accounts[deleteIndex].owner.split(' ').at(0)} deleted Successfully.`;
         accounts.splice(deleteIndex, 1);
+        clearWelcomeLabel(true);
+        inputCloseUsername.value = inputClosePin.value = "";
     }
     else {
         inputCloseUsername.value = inputClosePin.value = "";
         labelWelcome.textContent = "Invalid Credentials !!!";
+        clearWelcomeLabel();
     }
 });
 
