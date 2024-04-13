@@ -32,6 +32,22 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
+//Cookie
+const cookie = document.createElement('div');
+cookie.innerHTML = `We use cookies for improved functionality and analytics.<button class="btn btn--close--cookie">Got it!</button>`;
+cookie.classList.add('cookie-message');
+document.querySelector('.header').append(cookie);
+
+document.querySelector('.btn--close--cookie').addEventListener("click", function () {
+    cookie.remove();
+});
+
+cookie.style.backgroundColor = "#37383d";
+cookie.style.width = "104%";
+
+cookie.style.height = Number.parseFloat(getComputedStyle(cookie).height, 10) + 20 + "px";
+
+
 //Scroll Behavoir
 btnScrollTo.addEventListener("click", function () {
     section1.scrollIntoView({ behavior: "smooth" });
@@ -86,3 +102,56 @@ nav.addEventListener("mouseover", linkHover.bind(0.5));
 nav.addEventListener("mouseout", linkHover.bind(1));
 
 //Making sticky nav
+
+const obsCallback = function (entries, observer) {
+    const [entry] = entries;
+    if (!entry.isIntersecting)
+        document.querySelector('.nav').classList.add('sticky');
+    else
+        document.querySelector('.nav').classList.remove('sticky');
+};
+
+const observer = new IntersectionObserver(obsCallback, { root: null, threshold: 0 })
+observer.observe(document.querySelector('.header'));
+
+//swift loading of webpages
+
+const allSections = document.querySelectorAll('section');
+
+const callBack = function (entries, observer) {
+    const [entry] = entries;
+    if (!entry.isIntersecting) return;
+
+    entry.target.classList.remove('section--hidden');
+    observer.unobserve(entry.target);
+}
+
+const sectionObserver = new IntersectionObserver(callBack, { root: null, threshold: 0.15 });
+allSections.forEach(section => {
+    sectionObserver.observe(section);
+    section.classList.add('section--hidden');
+});
+
+
+//lazy loading images
+
+const allImages = document.querySelectorAll('img[data-src]');
+
+const imgCallback = function (entries, observer) {
+    const [entry] = entries;
+    if (!entry.isIntersecting) return;
+    entry.target.src = entry.target.dataset.src;
+
+    entry.target.addEventListener("load", function () {
+        entry.target.classList.remove('lazy-img');
+    });
+
+    observer.unobserve(entry.target);
+}
+
+const imgObserver = new IntersectionObserver(imgCallback, { root: null, threshold: 0, rootMargin: '-100px' });
+
+allImages.forEach(img => imgObserver.observe(img));
+
+
+//slider
