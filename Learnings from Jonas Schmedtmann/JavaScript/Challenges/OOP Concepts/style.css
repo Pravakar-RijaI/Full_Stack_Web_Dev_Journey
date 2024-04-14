@@ -1,0 +1,27 @@
+/* ||RESET STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLE DECLARATIONS */
+:root {
+  /* COLORS */
+  --FONTCLR: #fff;
+  --BGIMG: linear-gradient(to top left, rgb(133, 243, 6), rgb(86, 196, 101));
+
+  /* FONT */
+  --FONT: "Arial";
+}
+
+/* ||GENERAL STYLES */
+.main {
+  text-transform: uppercase;
+  display: grid;
+  place-content: center;
+  font-family: var(--FONT);
+  color: var(--FONTCLR);
+  height: 100vh;
+  background-image: var(--BGIMG);
+}
