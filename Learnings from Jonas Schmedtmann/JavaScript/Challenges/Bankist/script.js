@@ -155,3 +155,6 @@ allImages.forEach(img => imgObserver.observe(img));
 
 
 //slider
+
+
+//putting script tag in head by using defer attribute instead of async and just putting in head because defer defers the execution of script only after the html has been parsed to DOM tree.
